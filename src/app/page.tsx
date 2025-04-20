@@ -2,57 +2,116 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        1231
+    <div className=" flex flex-col gap-20">
+      <section className="w-full bg-blue-300 h-[600px]">banner</section>
+      <section className="w-full bg-gray-100 h-[200px]">partners</section>
+      <main className="px-4">
+        <header className="flex flex-col items-center">
+          <span className="text-orange-500">Our Highlights</span>
+          <h2 className="text-5xl font-bold">Products</h2>
+        </header>
+        <ul className="grid grid-cols-1 gap-6 mt-10">
+          <li className="bg-white rounded-xl overflow-hidden">
+            <div className="w-full h-[300px] bg-blue-200 overflow-hidden">
+              <Image src="" alt="" />
+            </div>
+            <div className="p-12">
+              <header className="flex justify-between">
+                <h3 className="font-bold text-xl">Sushi</h3>
+                <span className="font-bold text-2xl text-orange-500">$29</span>
+              </header>
+              <p className="mt-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptates possimus eveniet natus cumque odio accusamus
+                voluptatum?
+              </p>
+            </div>
+          </li>
+          <li className="bg-white rounded-xl overflow-hidden">
+            <div className="w-full h-[300px] bg-blue-200 overflow-hidden">
+              <Image src="" alt="" />
+            </div>
+            <div className="p-12">
+              <header className="flex justify-between">
+                <h3 className="font-bold text-xl">Sushi</h3>
+                <span className="font-bold text-2xl text-orange-500">$29</span>
+              </header>
+              <p className="mt-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptates possimus eveniet natus cumque odio accusamus
+                voluptatum?
+              </p>
+            </div>
+          </li>
+          <li className="bg-white rounded-xl overflow-hidden">
+            <div className="w-full h-[300px] bg-blue-200 overflow-hidden">
+              <Image src="" alt="" />
+            </div>
+            <div className="p-12">
+              <header className="flex justify-between">
+                <h3 className="font-bold text-xl">Sushi</h3>
+                <span className="font-bold text-2xl text-orange-500">$29</span>
+              </header>
+              <p className="mt-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptates possimus eveniet natus cumque odio accusamus
+                voluptatum?
+              </p>
+            </div>
+          </li>
+
+          <li className="bg-white rounded-xl overflow-hidden">
+            <div className="w-full h-[300px] bg-blue-200 overflow-hidden">
+              <Image src="" alt="" />
+            </div>
+            <div className="p-12">
+              <header className="flex justify-between">
+                <h3 className="font-bold text-xl">Sushi</h3>
+                <span className="font-bold text-2xl text-orange-500">$29</span>
+              </header>
+              <p className="mt-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptates possimus eveniet natus cumque odio accusamus
+                voluptatum?
+              </p>
+            </div>
+          </li>
+          <li className="bg-white rounded-xl overflow-hidden">
+            <div className="w-full h-[300px] bg-blue-200 overflow-hidden">
+              <Image src="" alt="" />
+            </div>
+            <div className="p-12">
+              <header className="flex justify-between">
+                <h3 className="font-bold text-xl">Sushi</h3>
+                <span className="font-bold text-2xl text-orange-500">$29</span>
+              </header>
+              <p className="mt-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptates possimus eveniet natus cumque odio accusamus
+                voluptatum?
+              </p>
+            </div>
+          </li>
+          <li className="bg-white rounded-xl overflow-hidden">
+            <div className="w-full h-[300px] bg-blue-200 overflow-hidden">
+              <Image src="" alt="" />
+            </div>
+            <div className="p-12">
+              <header className="flex justify-between">
+                <h3 className="font-bold text-xl">Sushi</h3>
+                <span className="font-bold text-2xl text-orange-500">$29</span>
+              </header>
+              <p className="mt-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptates possimus eveniet natus cumque odio accusamus
+                voluptatum?
+              </p>
+            </div>
+          </li>
+        </ul>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <section className="w-full bg-blue-300 h-[400px]">reviews</section>
+      <section className="w-full bg-blue-300 h-[400px]">newsletter</section>
     </div>
   )
 }
