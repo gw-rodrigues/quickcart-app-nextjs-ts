@@ -11,8 +11,8 @@ export default function Header() {
   }
 
   return (
-    <header className="max-w-[1440px] w-full h-20">
-      <div className="p-4 flex justify-between items-center">
+    <header className="h-20">
+      <div className="max-w-[1440px] p-4 flex justify-between items-center m-auto">
         <Link href="/" className="font-bold text-3xl">
           Quick<span className="text-orange-500">Cart</span>
         </Link>
