@@ -12,7 +12,18 @@ import {
 export default function Home() {
   return (
     <div>
-      <section className="w-full bg-blue-300 h-[600px]">banner</section>
+      <section className="w-full bg-blue-300 h-[600px] bg-[url('/banner.jpg')] bg-cover bg-no-repeat bg-center">
+        <header className="h-full flex flex-col justify-center items-center gap-8 px-8">
+          <h1 className="text-7xl font-bold text-gray-800">
+            Top <span className="text-orange-500">Products</span> Arround the
+            world
+          </h1>
+          <p className="text-xl  text-gray-600">
+            Elevate your culinary journey with our thoughtfully curated menu,
+            designed to cater to diverse tastes.
+          </p>
+        </header>
+      </section>
       <section className="w-full bg-gray-100 p-4 mt-20">
         <header className="flex flex-col items-center">
           <span className="text-gray-400 font-bold">Our Highlights</span>
@@ -137,7 +148,7 @@ export default function Home() {
           </li>
         </ul>
       </main>
-      <section className="max-w-[1140px] gap-8 grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300,1fr))] place-self-center items-center px-4 py-40 mt-20">
+      <section className="max-w-[1440px] gap-8 grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300,1fr))] place-self-center items-center px-8 py-40 mt-20">
         <div className="flex justify-center">
           <Box size={300} fill="#e6e6e6" />
         </div>
@@ -174,7 +185,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-orange-500 px-8 py-40">
-        <div className="max-w-[1140px] gap-8 grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300,1fr))] place-self-center items-center">
+        <div className="max-w-[1440px] gap-8 grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300,1fr))] place-self-center items-center">
           <div className="flex justify-center">
             <Box size={300} fill="#e6e6e6" />
           </div>
