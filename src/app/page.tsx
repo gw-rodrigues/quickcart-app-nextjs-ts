@@ -1,3 +1,5 @@
+'use client'
+
 import { SectionSubtitle } from '@/components/SectionSubtitle'
 import { SectionTitle } from '@/components/SectionTitle'
 import { SectionHeader } from '@/components/SectionHeader'
@@ -9,23 +11,16 @@ import { PartnerSection } from '@/components/PartnerSection'
 import { MainSection } from '@/components/MainSection'
 import { ReviewSection } from '@/components/ReviewSection'
 import { NewsletterSection } from '@/components/NewsletterSection'
+import { TProduct } from '@/types/Product'
+
+import { useProducts } from '@/hooks/useProducts'
 
 export default function Home() {
-  const list = [
-    {
-      id: 1,
-      title: 'Sushi',
-      price: 29,
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates possimus eveniet natus cumque odio accusamus voluptatum?',
-      category: 'Food',
-      image: 'https://images.unsplash.com/photo-1726607424598-139ff3391ce8',
-      rating: {
-        rate: 4,
-        count: 831,
-      },
-    },
-  ]
+  const { data, isLoading, error } = useProducts()
+
+  if (isLoading) return <p>Loading...</p>
+  if (error) return <p>Erro ao carregar produtos</p>
+
   return (
     <>
       <BannerSection>
@@ -45,7 +40,9 @@ export default function Home() {
           <SectionTitle>Products</SectionTitle>
         </SectionHeader>
         <ProductList>
-          <ProductListCard Product={list[0]} />
+          {data.map((p: TProduct) => (
+            <ProductListCard key={p.id} Product={p} />
+          ))}
         </ProductList>
       </MainSection>
       <ReviewSection />

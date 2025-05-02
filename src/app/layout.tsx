@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 import '@/styles/globals.css'
+import { ProductClientProvider } from '@/store/ProductClientProvider'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        {children}
+        <ProductClientProvider>{children}</ProductClientProvider>
         <Footer />
       </body>
     </html>
