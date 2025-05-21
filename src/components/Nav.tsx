@@ -3,8 +3,10 @@ import Link from 'next/link'
 import { Menu, X, ShoppingCart } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from './NavLink'
+import { useCart } from '@/store/cartStore'
 
 export function Nav() {
+  const { items } = useCart()
   const [isOpen, setIsOpen] = useState(false)
   const navLinks = [
     { title: 'Home', href: '/' },
@@ -50,6 +52,9 @@ export function Nav() {
             </NavLink>
           ))}
           <NavLink key="cart-link" href="/">
+            <span className="absolute -top-1 right-0 text-orange-500 text-sm">
+              {items.length}
+            </span>
             <ShoppingCart size={25} fill="#e5e5e5" />
           </NavLink>
         </ul>
