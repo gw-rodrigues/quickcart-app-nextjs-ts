@@ -1,16 +1,25 @@
-import { Box } from 'lucide-react'
+'use client'
+import Image from 'next/image'
 import { SectionHeader } from './SectionHeader'
 import { SectionTitle } from './SectionTitle'
 import { SectionSubtitle } from './SectionSubtitle'
 import { Input } from './Input'
 import { Button } from './Button'
 
+import News from '@/assets/news.jpg'
+
 export function NewsletterSection() {
   return (
     <section className="bg-orange-500 px-8 py-40">
       <div className="max-w-[1440px] gap-8 grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300,1fr))] place-self-center items-center">
         <div className="flex justify-center">
-          <Box size={300} fill="#e6e6e6" />
+          <Image
+            src={News}
+            alt="news image"
+            width={300}
+            height={300}
+            className="rotate-12 rounded-2xl"
+          />
         </div>
         <div>
           <SectionHeader>
@@ -29,7 +38,7 @@ export function NewsletterSection() {
             className="flex flex-col xl:flex-row gap-4 mt-8"
           >
             <Input type="text" placeholder="Your Email Address" />
-            <Button type="submit">Get</Button>
+            <Button type="button">Get</Button>
           </form>
         </div>
       </div>

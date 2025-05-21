@@ -1,13 +1,23 @@
-import { Box, CircleArrowRight, CircleUser } from 'lucide-react'
+import Image from 'next/image'
+import { CircleArrowRight } from 'lucide-react'
 import { SectionHeader } from './SectionHeader'
 import { SectionSubtitle } from './SectionSubtitle'
 import { SectionTitle } from './SectionTitle'
+
+import Reviews from '@/assets/review.jpg'
+import Person from '@/assets/person.jpg'
 
 export function ReviewSection() {
   return (
     <section className="max-w-[1440px] gap-8 grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300,1fr))] place-self-center items-center px-8 py-40 mt-20">
       <div className="flex justify-center">
-        <Box size={300} fill="#e6e6e6" />
+        <Image
+          src={Reviews}
+          alt="Reviews image"
+          width={300}
+          height={300}
+          className="-rotate-4 rounded-2xl"
+        />
       </div>
       <div className="flex flex-col xl:flex-row gap-4 xl:items-center">
         <div>
@@ -17,11 +27,7 @@ export function ReviewSection() {
           </SectionHeader>
           <div className="flex items-center gap-8 mt-8">
             <div className="rounded-full w-15 h-15 flex items-center justify-center overflow-hidden">
-              <CircleUser
-                size="auto"
-                fill="#e6e6e6"
-                className="text-gray-500"
-              />
+              <Image src={Person} alt="Person image" width={100} height={100} />
             </div>
             <div>
               <p className="font-bold text-gray-800">Raymond Lucifer</p>
