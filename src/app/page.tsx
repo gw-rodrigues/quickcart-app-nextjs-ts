@@ -13,13 +13,13 @@ import { ReviewSection } from '@/components/ReviewSection'
 import { NewsletterSection } from '@/components/NewsletterSection'
 import { TProduct } from '@/types/Product'
 
-import { useProducts } from '@/hooks/useProducts'
+import { useHighlights } from '@/hooks/useProducts'
 
 export default function Home() {
-  const { data, isLoading, error } = useProducts()
+  const { data, isLoading, error } = useHighlights()
 
   if (isLoading) return <p>Loading...</p>
-  if (error) return <p>Erro ao carregar produtos</p>
+  if (error) return <p>Error loading products.</p>
 
   return (
     <>
