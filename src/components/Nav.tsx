@@ -4,14 +4,17 @@ import { Menu, X, ShoppingCart } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from './NavLink'
 import { useCart } from '@/store/cartStore'
+import { useTotalItems } from '@/hooks/useCart'
 
 export function Nav() {
   const { items } = useCart()
+  const totalItems = useTotalItems(items)
+
   const [isOpen, setIsOpen] = useState(false)
   const navLinks = [
     { title: 'Home', href: '/' },
     { title: 'Services', href: '/' },
-    { title: 'Products', href: '/' },
+    { title: 'Products', href: '/products' },
     { title: 'Contact', href: '/' },
   ]
 
@@ -47,13 +50,13 @@ export function Nav() {
         </div>
         <ul className="text-lg text-gray-700 font-bold flex flex-col md:flex-row md:gap-8">
           {navLinks.map((item) => (
-            <NavLink key={item.title} href={item.href}>
+            <NavLink key={item.title} href={item.href} toggleMenu={toggleMenu}>
               {item.title}
             </NavLink>
           ))}
-          <NavLink key="cart-link" href="/">
+          <NavLink key="cart-link" href="/cart" toggleMenu={toggleMenu}>
             <span className="absolute -top-1 right-0 text-orange-500 text-sm">
-              {items.length}
+              {totalItems}
             </span>
             <ShoppingCart size={25} fill="#e5e5e5" />
           </NavLink>
