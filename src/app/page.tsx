@@ -41,7 +41,12 @@ export default function Home() {
         </SectionHeader>
         <ProductList>
           {data.map((p: TProduct) => (
-            <ProductListCard key={p.id} Product={p} />
+            <ProductListCard
+              key={p.id}
+              Product={p}
+              ButtonType="add"
+              ButtonText="Add to cart"
+            />
           ))}
         </ProductList>
       </MainSection>
