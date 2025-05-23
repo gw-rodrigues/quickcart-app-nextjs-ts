@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { TProduct } from '@/types/Product'
 import { useTruncate } from '@/hooks/usetruncate'
 import { Button } from './Button'
-import { ICartProducts, useCart } from '@/store/cartStore'
+import { useCart } from '@/store/cartStore'
 import toast from 'react-hot-toast'
 
 interface IProductListCardProps extends React.HTMLAttributes<HTMLLIElement> {
